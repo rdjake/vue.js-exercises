@@ -1,0 +1,14 @@
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.input{
+  border-color: lightgray;
+  width: 40px;
+}
+.bound{
+  border-color: red;
+}
+.btn-random{
+  margin-top: 8px;
+}

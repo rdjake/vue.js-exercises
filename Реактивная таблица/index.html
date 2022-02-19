@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Реактивная таблица</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+	<script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/v-tag-input@0.0.3/dist/v-tag-input.js"></script>
+  </head>
+  <body class="body">
+	<div id="app">
+		<table-component inline-template v-bind:rows="10" v-bind:cols="5">
+		<div>
+		  <div v-for="i in rowNum" v-bind:key="i" class="row">
+			<div v-for="j in colNum" v-bind:key="j" class="col">
+			  <input v-if="isBoundInput(i,j)" type='number':value="boundSum(i,j)" readonly class="input bound">
+			  <input v-else  type='number' class="input" v-model="storage[i-1][j-1]" >
+			</div>
+		  </div>
+		   <button v-on:click="randomClick" class="btn-random">Random</button>
+		</div>
+	  </table-component>
+</div>
+  </body>
+</html>
