@@ -1,1 +1,1 @@
-# vue.js-exercises
+# Упражнения для VUE.JS
